@@ -24,9 +24,8 @@ deleteRows();
 </head>
 <body>
 <div class="container">
-
+    <h1 class="text-center">Delete</h1>
     <div class="col-sm-6">
-
 
         <form action="loginDelete.php" method="post">
             <br>
@@ -39,7 +38,6 @@ deleteRows();
 
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" class="form-control">

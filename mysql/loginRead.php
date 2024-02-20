@@ -38,7 +38,7 @@
 </head>
 <body>
 <div class="container">
-
+<h1 class="text-center">Read</h1>
     <div class="col-sm-6">
 
         // Display data. This code displays data organized and grouped by user

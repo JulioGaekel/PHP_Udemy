@@ -24,7 +24,7 @@ updateTable();
 </head>
 <body>
 <div class="container">
-
+<h1 class="text-center">Update</h1>
     <div class="col-sm-6">
 
 
