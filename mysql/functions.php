@@ -51,4 +51,27 @@ function updateTable() {
 
 }
 
+function deleteRows() {
+
+    if (isset($_POST['submit'])) {
+        global $connection;
+//        global $result; /*If $result is not used within the function after initialization, declare it global to use
+// outside. If not, table will not update*/
+
+        $id = $_POST['id'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $query = "DELETE FROM users ";
+        $query .= "WHERE id = $id ";
+
+        $result = mysqli_query($connection, $query);
+
+        if (!$result) {
+            die("ERROR, table not updated!" . mysqli_error($connection));
+        }
+
+    }
+
+}
 ?>
