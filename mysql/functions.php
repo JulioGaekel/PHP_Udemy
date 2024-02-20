@@ -110,5 +110,20 @@ function createRows() {
     }
 }
 
+function readRows() {
+    global $connection;
+    // Read data from database
+    $query = "SELECT * FROM users";
+    $result = mysqli_query($connection, $query);
 
+    // Check on the query
+    if (!$result) {
+        die("Query FAILED" . mysqli_error());
+    }
+
+    while ($row = mysqli_fetch_assoc($result)) {
+
+            print_r($row);
+    }
+}
 ?>
