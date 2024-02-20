@@ -45,6 +45,8 @@ function updateTable() {
 
         if (!$result) {
             die("ERROR, table not updated!" . mysqli_error($connection));
+        } else {
+            echo "Record successfully updated";
         }
 
     }
@@ -69,6 +71,8 @@ function deleteRows() {
 
         if (!$result) {
             die("ERROR, table not updated!" . mysqli_error($connection));
+        } else {
+            echo "Record successfully deleted";
         }
 
     }
@@ -90,6 +94,8 @@ function createRows() {
         // Check on the query
         if (!$result) {
             die("Query FAILED" . mysqli_error());
+        } else {
+            echo "User created successfully";
         }
 
 
