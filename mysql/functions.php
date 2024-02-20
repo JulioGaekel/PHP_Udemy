@@ -121,8 +121,9 @@ function readRows() {
         die("Query FAILED" . mysqli_error());
     }
 
+    // Fetch data from db using the result from the query above
     while ($row = mysqli_fetch_assoc($result)) {
-
+            // Display the data on the screen
             print_r($row);
     }
 }
