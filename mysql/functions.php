@@ -87,8 +87,15 @@ function createRows() {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
+        /* Function used to prevent injections. This function takes two parameters, connection and what you want to clean (escape). In this case, $username. This function is outdated, better to use PDO. However, for the purposes of the course, I will include it.*/
+      /*  $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);*/
+
+        /*$password = password_hash($password, PASSWORD_BCRYPT); /*TODO: Fix password encryption. After clicking
+ create, page goes blank and data is not inserted into database*/
+
         // Insert data into database
-        $query = "INSERT INTO users(username, password) VALUES ('$username', '$password')";
+        $query = 'INSERT INTO users(username, `password`) VALUES ("'.$username.'", "'.$password.'")';
         $result = mysqli_query($connection, $query);
 
         // Check on the query
