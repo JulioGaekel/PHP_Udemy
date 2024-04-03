@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-
+// Review code.
 function addNumbers($number1, $number2) {
     $sum = $number1 + $number2;
     return $sum;
